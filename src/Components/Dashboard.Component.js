@@ -1,5 +1,8 @@
 import React from "react";
 import AdminTitle from "./AdminTitle.Component";
+import BarChart from "./BarChart.Component";
+import increaseIcon from "../img/increaseArrow.svg";
+import decreaseIcon from "../img/decreaseArrow.svg";
 
 const Dashboard = () => {
   return (
@@ -14,10 +17,14 @@ const Dashboard = () => {
           <div className="todays-visits">
             <div className="todays-visits-tit">
               <p>Today's Visits</p>
+              <img src={increaseIcon} alt="" />
+              <img src={decreaseIcon} alt="" />
             </div>
             <p className="highlighted">168</p>
           </div>
         </div>
+        <AdminTitle title="Overview" desc="Data Visualization, Statistics" />
+        <BarChart />
       </div>
     </>
   );

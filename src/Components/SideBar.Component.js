@@ -16,28 +16,28 @@ const SideBar = () => {
           </div>
         </div>
         <nav>
-          <NavLink to="/home">
+          <NavLink to="/admin">
             <div className="navTitle">
               <img src={dasboardIcon} alt="dashboard" />
               <p>Dashboard</p>
             </div>
             <div className="navLine"></div>
           </NavLink>
-          <NavLink to="/home/portfolio">
+          <NavLink to="/admin/portfolio">
             <div className="navTitle">
               <img src={portfolioIcon} alt="portfolio" />
               <p>Portfolio</p>
             </div>
             <div className="navLine"></div>
           </NavLink>
-          <NavLink to="/home/carrers">
+          <NavLink to="/admin/carrers">
             <div className="navTitle">
               <img src={carrersIcon} alt="carrers" />
               <p>Carrers</p>
             </div>
             <div className="navLine"></div>
           </NavLink>
-          <NavLink to="/home/contact">
+          <NavLink to="/admin/contact">
             <div className="navTitle">
               <img src={contactIcon} alt="contact" />
               <p>Contact</p>

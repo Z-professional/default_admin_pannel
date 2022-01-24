@@ -187,7 +187,7 @@
 }
 
 .dFlex .mainContent header {
-  padding: 1.5rem 1.5rem;
+  padding: 1.5rem 2rem;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -222,6 +222,7 @@
 }
 
 .dFlex .mainContent header .userId {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -242,7 +243,7 @@
 
 .dFlex .mainContent .dashboardContainer .visits-wrapper {
   background-color: #090a13;
-  padding: 1.5rem 1rem;
+  padding: 2rem 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -259,12 +260,22 @@
 }
 
 .dFlex .mainContent .dashboardContainer .visits-wrapper .todays-visits {
-  margin-left: 2rem;
+  margin-left: 2.5rem;
+}
+
+.dFlex .mainContent .dashboardContainer .visits-wrapper .todays-visits .todays-visits-tit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .dFlex .mainContent .dashboardContainer .visits-wrapper .todays-visits .todays-visits-tit p {
   color: #fff;
   font-size: 1rem;
+}
+
+.dFlex .mainContent .dashboardContainer .visits-wrapper .todays-visits .todays-visits-tit img {
+  margin-left: 0.5rem;
 }
 
 .dFlex .mainContent .dashboardContainer .visits-wrapper .todays-visits p.highlighted {
