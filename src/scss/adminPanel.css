@@ -1,0 +1,280 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+.adminPanelContainer {
+  width: 100%;
+  height: 100vh;
+  background-color: #090a13;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.adminPanelContainer .adminPanelContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.adminPanelContainer .adminPanelContent p.title {
+  position: relative;
+  color: white;
+  font-size: 2rem;
+  line-height: 3rem;
+}
+
+.adminPanelContainer .adminPanelContent p.title::before {
+  content: "";
+  position: absolute;
+  background: rgba(246, 160, 31, 0.15);
+  max-width: 12rem;
+  width: 100%;
+  margin-left: -6rem;
+  height: 100%;
+}
+
+.adminPanelContainer .adminPanelContent .loginForm {
+  padding: 2rem 6rem;
+  background-color: white;
+  margin-top: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.adminPanelContainer .adminPanelContent .loginForm p.Header {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.adminPanelContainer .adminPanelContent .loginForm .formInput input {
+  margin-top: 0.5rem;
+  width: 400px;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.35);
+  border-radius: 5px;
+}
+
+.adminPanelContainer .adminPanelContent .loginForm .formInput .redMessage {
+  margin-top: 0.3rem;
+  color: red;
+}
+
+.adminPanelContainer .adminPanelContent .loginForm input[type="button"] {
+  margin-top: 1rem;
+  padding: 0.4rem 1.2rem;
+  background-color: #f6a01f;
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sideBar {
+  height: 100vh;
+  max-width: 300px;
+  width: 100%;
+  background-color: #090a13;
+}
+
+.sideBar .logo {
+  background: #111325;
+  padding: 1rem 1.5rem;
+}
+
+.sideBar .logo .navCircle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.sideBar .logo .navCircle img {
+  width: 50px;
+  height: 50px;
+}
+
+.sideBar nav a {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.2rem 1.5rem;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.sideBar nav a .navTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sideBar nav a .navTitle p {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-left: 0.8rem;
+}
+
+.sideBar nav a .navLine {
+  width: 8px;
+  height: 2px;
+  background: #ffffff;
+  border-radius: 2px;
+}
+
+.sideBar nav a:hover {
+  background-color: #111325;
+}
+
+.sideBar nav a.active {
+  background-color: #020203;
+}
+
+.dFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dFlex .mainContent {
+  width: 100%;
+}
+
+.dFlex .mainContent header {
+  padding: 1.5rem 1.5rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dFlex .mainContent header .lineContainer .line {
+  height: 6px;
+  background: rgba(9, 10, 19, 0.1);
+  border-radius: 49px;
+  margin: 0.5rem 0;
+}
+
+.dFlex .mainContent header .lineContainer .line:first-child {
+  width: 80px;
+}
+
+.dFlex .mainContent header .lineContainer .line:nth-child(2) {
+  width: 60px;
+}
+
+.dFlex .mainContent header .lineContainer .line:last-child {
+  width: 40px;
+}
+
+.dFlex .mainContent header .userId {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.dFlex .mainContent header .userId p {
+  margin: 0 0.5rem;
+}
+
+.dFlex .mainContent .dashboardContainer {
+  background-color: #f8f8f8;
+  padding: 0 2rem;
+}
+
+.dFlex .mainContent .dashboardContainer .visits-wrapper {
+  background-color: #090a13;
+  padding: 1.5rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dFlex .mainContent .dashboardContainer .visits-wrapper .total-visits p {
+  color: #fff;
+}
+
+.dFlex .mainContent .dashboardContainer .visits-wrapper .total-visits p:last-child {
+  margin-top: 0.4rem;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.dFlex .mainContent .dashboardContainer .visits-wrapper .todays-visits {
+  margin-left: 2rem;
+}
+
+.dFlex .mainContent .dashboardContainer .visits-wrapper .todays-visits .todays-visits-tit p {
+  color: #fff;
+  font-size: 1rem;
+}
+
+.dFlex .mainContent .dashboardContainer .visits-wrapper .todays-visits p.highlighted {
+  color: #f6a01f;
+  margin-top: 0.4rem;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.dFlex .mainContent .Title {
+  padding: 3rem 0;
+}
+/*# sourceMappingURL=adminPanel.css.map */

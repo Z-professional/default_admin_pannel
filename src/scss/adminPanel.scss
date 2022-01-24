@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+// variables
+$backgroundColor: #090a13;
+$main-color: #f6a01f;
+.adminPanelContainer {
+  width: 100%;
+  height: 100vh;
+  background-color: $backgroundColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .adminPanelContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    p.title {
+      position: relative;
+      color: white;
+      font-size: 2rem;
+      line-height: 3rem;
+      &::before {
+        content: "";
+        position: absolute;
+        background: rgba($main-color, 0.15);
+        max-width: 12rem;
+        width: 100%;
+        margin-left: -6rem;
+        height: 100%;
+      }
+    }
+    .loginForm {
+      padding: 2rem 6rem;
+      background-color: white;
+      margin-top: 4rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      p.Header {
+        font-size: 2rem;
+        font-weight: bold;
+        margin: 1rem 0;
+      }
+      .formInput {
+        input {
+          margin-top: 0.5rem;
+          width: 400px;
+          padding: 0.3rem 0.5rem;
+          border: 1px solid rgba(0, 0, 0, 0.35);
+          border-radius: 5px;
+        }
+        .redMessage {
+          margin-top: 0.3rem;
+          color: red;
+        }
+      }
+      input[type="button"] {
+        margin-top: 1rem;
+        padding: 0.4rem 1.2rem;
+        background-color: $main-color;
+        border: none;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.sideBar {
+  height: 100vh;
+  max-width: 300px;
+  width: 100%;
+  background-color: $backgroundColor;
+  .logo {
+    background: #111325;
+    padding: 1rem 1.5rem;
+    .navCircle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      background-color: #fff;
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+  nav {
+    a {
+      text-decoration: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 1.5rem;
+      transition: 0.5s ease;
+      .navTitle {
+        display: flex;
+        p {
+          color: #fff;
+          font-size: 1.2rem;
+          margin-left: 0.8rem;
+        }
+      }
+      .navLine {
+        width: 8px;
+        height: 2px;
+        background: #ffffff;
+        border-radius: 2px;
+      }
+      &:hover {
+        background-color: #111325;
+      }
+      &.active {
+        background-color: #020203;
+      }
+    }
+  }
+}
+.dFlex {
+  display: flex;
+  .mainContent {
+    width: 100%;
+    header {
+      padding: 1.5rem 1.5rem;
+      height: fit-content;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .lineContainer {
+        .line {
+          height: 6px;
+          background: rgba(9, 10, 19, 0.1);
+          border-radius: 49px;
+          margin: 0.5rem 0;
+          &:first-child {
+            width: 80px;
+          }
+          &:nth-child(2) {
+            width: 60px;
+          }
+          &:last-child {
+            width: 40px;
+          }
+        }
+      }
+      .userId {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        p {
+          margin: 0 0.5rem;
+        }
+      }
+    }
+    .dashboardContainer {
+      background-color: #f8f8f8;
+      padding: 0 2rem;
+      .visits-wrapper {
+        background-color: #090a13;
+        padding: 1.5rem 1rem;
+        display: flex;
+        .total-visits {
+          p {
+            color: #fff;
+            &:last-child {
+              margin-top: 0.4rem;
+              font-weight: bold;
+              font-size: 2rem;
+            }
+          }
+        }
+        .todays-visits {
+          margin-left: 2rem;
+          .todays-visits-tit {
+            p {
+              color: #fff;
+              font-size: 1rem;
+            }
+          }
+          p.highlighted {
+            color: $main-color;
+            margin-top: 0.4rem;
+            font-weight: bold;
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+
+    // title
+    .Title {
+      padding: 3rem 0;
+    }
+  }
+}
