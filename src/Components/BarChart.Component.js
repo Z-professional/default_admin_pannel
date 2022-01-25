@@ -1,16 +1,15 @@
 import { ResponsiveBar } from "@nivo/bar";
-import data from "../Data/BarChart.Data";
 
 const BarChart = ({ data }) => (
   <ResponsiveBar
     data={data}
-    keys={["hot dog", "burger", "sandwich", "kebab", "fries", "donut"]}
-    indexBy="country"
+    keys={["visit"]}
+    indexBy="date"
     margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
     padding={0.3}
     valueScale={{ type: "linear" }}
     indexScale={{ type: "band", round: true }}
-    colors={{ scheme: "nivo" }}
+    colors={"hsla(220, 100%, 57%, 1)"}
     defs={[
       {
         id: "dots",

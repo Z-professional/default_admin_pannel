@@ -101,6 +101,9 @@
 }
 
 .sideBar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   height: 100vh;
   max-width: 300px;
   width: 100%;

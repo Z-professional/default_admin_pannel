@@ -4,7 +4,10 @@ import BarChart from "./BarChart.Component";
 import increaseIcon from "../img/increaseArrow.svg";
 import decreaseIcon from "../img/decreaseArrow.svg";
 
+import { data } from "../Data/BarChart.Data";
+
 const Dashboard = () => {
+  console.log(data);
   return (
     <>
       <div className="dashboardContainer">
@@ -17,14 +20,16 @@ const Dashboard = () => {
           <div className="todays-visits">
             <div className="todays-visits-tit">
               <p>Today's Visits</p>
-              <img src={increaseIcon} alt="" />
-              <img src={decreaseIcon} alt="" />
+              <img src={increaseIcon} alt="icon" />
+              <img src={decreaseIcon} alt="icon" />
             </div>
             <p className="highlighted">168</p>
           </div>
         </div>
         <AdminTitle title="Overview" desc="Data Visualization, Statistics" />
-        <BarChart />
+        <div style={{ height: 500 }}>
+          <BarChart data={data} />
+        </div>
       </div>
     </>
   );
