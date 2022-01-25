@@ -203,6 +203,64 @@ $main-color: #f6a01f;
         }
       }
     }
+    .portfolioContainer {
+      padding: 0 2rem;
+      background-color: #f8f8f8;
+      .portfolioForm {
+        background-color: $backgroundColor;
+        padding: 2rem 1.5rem;
+        h3 {
+          color: #f6a01f;
+          font-size: 1.5rem;
+          margin-bottom: 2rem;
+        }
+        form {
+          .formInput {
+            margin-bottom: 1.5rem;
+            p {
+              color: #fff;
+              margin-bottom: 0.5rem;
+            }
+            input {
+              max-width: 400px;
+              width: 100%;
+              padding: 0.4rem 0.5rem;
+            }
+          }
+        }
+      }
+      .portfolioCardContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 2rem;
+        padding: 1rem 0;
+        .portfolioCard {
+          p {
+            line-height: 1.5rem;
+          }
+          .btn-wrapper {
+            margin-top: 0.5rem;
+            button {
+              padding: 0.4rem 1.5rem;
+              border: none;
+              border-radius: 37px;
+              &:nth-child(1) {
+                background-color: #ff0000;
+                color: #fff;
+              }
+              &:last-child {
+                border: 1px solid #00af07;
+                color: #00af07;
+                margin-left: 1rem;
+              }
+            }
+          }
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
 
     // title
     .Title {
