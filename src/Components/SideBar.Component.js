@@ -16,7 +16,7 @@ const SideBar = () => {
           </div>
         </div>
         <nav>
-          <NavLink to="/admin">
+          <NavLink to="/admin/" exact>
             <div className="navTitle">
               <img src={dasboardIcon} alt="dashboard" />
               <p>Dashboard</p>

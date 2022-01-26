@@ -1,10 +1,41 @@
 import React from "react";
-
+import AdminTitle from "./AdminTitle.Component";
+import { contacts } from "../Data/Contact.data";
 const Contact = () => {
   return (
-    <div>
-      <h1>Contact</h1>
-    </div>
+    <>
+      <div className="contactContainer">
+        <AdminTitle title="Contacts" desc="Clients / Reviews" />
+        <div className="contacts-wrapper">
+          {contacts[0] !== undefined ? (
+            contacts.map((data) => (
+              <div className="contacts" key={data.id}>
+                <h2>Name: {data.name}</h2>
+                <div className="contact-info">
+                  <p>Subject:</p>
+                  <p>{data.subject}</p>
+                </div>
+                <div className="contact-info">
+                  <p>Phone Number:</p>
+                  <p>{data.ph}</p>
+                </div>
+                <div className="contact-info">
+                  <p>Email:</p>
+                  <p>{data.email}</p>
+                </div>
+                <div className="contact-infomsg">
+                  <p>Message:</p>
+                  <p>{data.message}</p>
+                </div>
+                <input type="button" value="Remove" />
+              </div>
+            ))
+          ) : (
+            <p className="not-available">No Contacts Available.</p>
+          )}
+        </div>
+      </div>
+    </>
   );
 };
 

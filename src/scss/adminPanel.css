@@ -360,4 +360,68 @@
 .dFlex .mainContent .Title {
   padding: 3rem 0;
 }
+
+.contactContainer {
+  margin: 0 2rem;
+}
+
+.contactContainer .contacts-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  -webkit-column-gap: 1.5rem;
+          column-gap: 1.5rem;
+  row-gap: 1.5rem;
+}
+
+.contactContainer .contacts-wrapper .contacts {
+  background-color: #fff;
+  padding: 2rem;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  line-height: 1.5rem;
+}
+
+.contactContainer .contacts-wrapper .contacts h2 {
+  color: #246dff;
+  margin-bottom: 0.8rem;
+}
+
+.contactContainer .contacts-wrapper .contacts .contact-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contactContainer .contacts-wrapper .contacts .contact-info p:first-child {
+  font-weight: bold;
+  margin-right: 0.3rem;
+}
+
+.contactContainer .contacts-wrapper .contacts .contact-infomsg p:first-child {
+  font-weight: bold;
+}
+
+.contactContainer .contacts-wrapper .contacts input {
+  padding: 0.4rem 1.5rem;
+  border: none;
+  border-radius: 37px;
+  background-color: #ff0000;
+  color: #fff;
+  margin-top: 1rem;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.contactContainer .contacts-wrapper .contacts input:hover {
+  -webkit-box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.8);
+          box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.8);
+}
+
+.not-available {
+  color: #ff0000;
+  font-weight: bold;
+}
 /*# sourceMappingURL=adminPanel.css.map */

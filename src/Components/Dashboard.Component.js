@@ -7,7 +7,6 @@ import decreaseIcon from "../img/decreaseArrow.svg";
 import { data } from "../Data/BarChart.Data";
 
 const Dashboard = () => {
-  console.log(data);
   return (
     <>
       <div className="dashboardContainer">
