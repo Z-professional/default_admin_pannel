@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import AdminTitle from "./AdminTitle.Component";
 import p1 from "../img/p1.png";
 import p2 from "../img/p2.png";
@@ -7,6 +7,8 @@ import p4 from "../img/p4.png";
 import p5 from "../img/p5.png";
 import p6 from "../img/p6.png";
 const Portfolio = () => {
+  const [portfolioImg, setPortfolioImg] = useState(null);
+
   return (
     <>
       <div className="portfolioContainer">
@@ -36,13 +38,30 @@ const Portfolio = () => {
             </div>
             <div className="formInput">
               <p>Image</p>
-              <input type="file" accept="image/png, image/jpeg , image/jpg " />
+              <div className="fileDiv">
+                <label class="custom-file-upload">
+                  <input
+                    type="file"
+                    onChange={(e) => {
+                      setPortfolioImg(e.target.files[0]);
+                      console.log(e.target.files[0]);
+                    }}
+                    accept="image/png, image/jpeg , image/jpg "
+                  />
+                  Upload an Image
+                </label>
+                <h4>
+                  {portfolioImg !== null
+                    ? `${portfolioImg.name}`
+                    : "No Image Selected."}
+                </h4>
+              </div>
             </div>
           </form>
         </div>
         <AdminTitle
           title="Update / Remove Portfolio"
-          desc="check and remove portfolio"
+          desc="Check and remove portfolio"
         />
         <div className="portfolioCardContainer">
           <div className="portfolioCard">
