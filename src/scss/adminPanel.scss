@@ -225,7 +225,22 @@ $main-color: #f6a01f;
               max-width: 400px;
               width: 100%;
               padding: 0.4rem 0.5rem;
+
+              input[type="file"] {
+                padding: 0.2rem 1rem;
+              }
             }
+            select {
+              padding: 0.2rem 1rem;
+            }
+          }
+          input[type="button"] {
+            padding: 0.4rem 2rem;
+            background-color: hsla(36, 92%, 54%, 1);
+            border: none;
+            border-radius: 2rem;
+            font-weight: bold;
+            cursor: pointer;
           }
         }
       }
@@ -325,4 +340,47 @@ $main-color: #f6a01f;
 .not-available {
   color: #ff0000;
   font-weight: bold;
+}
+
+//AdminCarrers
+.carrersContainer {
+  padding: 0 2rem;
+  background-color: #f8f8f8;
+  .carrersForm {
+    background-color: $backgroundColor;
+    padding: 2rem 1.5rem;
+    h3 {
+      color: #f6a01f;
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    form {
+      .formInput {
+        margin-bottom: 1.5rem;
+        p {
+          color: #fff;
+          margin-bottom: 0.5rem;
+        }
+        input {
+          max-width: 400px;
+          width: 100%;
+          padding: 0.4rem 0.5rem;
+        }
+        textarea {
+          padding: 0.4rem 0.5rem;
+        }
+        select {
+          padding: 0.2rem 1rem;
+        }
+      }
+      input[type="button"] {
+        padding: 0.4rem 2rem;
+        background-color: hsla(36, 92%, 54%, 1);
+        border: none;
+        border-radius: 2rem;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
+  }
 }

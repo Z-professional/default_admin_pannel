@@ -38,6 +38,7 @@ const Portfolio = () => {
               <p>Image</p>
               <input type="file" accept="image/png, image/jpeg , image/jpg " />
             </div>
+            <input type="button" value="Add" />
           </form>
         </div>
         <AdminTitle

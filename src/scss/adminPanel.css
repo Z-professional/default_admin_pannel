@@ -319,6 +319,23 @@
   padding: 0.4rem 0.5rem;
 }
 
+.dFlex .mainContent .portfolioContainer .portfolioForm form .formInput input input[type="file"] {
+  padding: 0.2rem 1rem;
+}
+
+.dFlex .mainContent .portfolioContainer .portfolioForm form .formInput select {
+  padding: 0.2rem 1rem;
+}
+
+.dFlex .mainContent .portfolioContainer .portfolioForm form input[type="button"] {
+  padding: 0.4rem 2rem;
+  background-color: #f69f1e;
+  border: none;
+  border-radius: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 .dFlex .mainContent .portfolioContainer .portfolioCardContainer {
   display: -ms-grid;
   display: grid;
@@ -423,5 +440,53 @@
 .not-available {
   color: #ff0000;
   font-weight: bold;
+}
+
+.carrersContainer {
+  padding: 0 2rem;
+  background-color: #f8f8f8;
+}
+
+.carrersContainer .carrersForm {
+  background-color: #090a13;
+  padding: 2rem 1.5rem;
+}
+
+.carrersContainer .carrersForm h3 {
+  color: #f6a01f;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.carrersContainer .carrersForm form .formInput {
+  margin-bottom: 1.5rem;
+}
+
+.carrersContainer .carrersForm form .formInput p {
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.carrersContainer .carrersForm form .formInput input {
+  max-width: 400px;
+  width: 100%;
+  padding: 0.4rem 0.5rem;
+}
+
+.carrersContainer .carrersForm form .formInput textarea {
+  padding: 0.4rem 0.5rem;
+}
+
+.carrersContainer .carrersForm form .formInput select {
+  padding: 0.2rem 1rem;
+}
+
+.carrersContainer .carrersForm form input[type="button"] {
+  padding: 0.4rem 2rem;
+  background-color: #f69f1e;
+  border: none;
+  border-radius: 2rem;
+  font-weight: bold;
+  cursor: pointer;
 }
 /*# sourceMappingURL=adminPanel.css.map */
