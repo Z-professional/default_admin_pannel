@@ -23,7 +23,7 @@ const Carrers = () => {
             </div>
             <div className="formInput">
               <p>Requirements (Separate lines using \\)</p>
-              <textarea name="textarea" id="" cols="53" rows="10"></textarea>
+              <textarea name="textarea" id="" rows="10"></textarea>
             </div>
             <div className="formInput">
               <p>Salary</p>

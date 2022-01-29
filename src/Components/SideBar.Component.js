@@ -23,21 +23,21 @@ const SideBar = () => {
             </div>
             <div className="navLine"></div>
           </NavLink>
-          <NavLink to="/admin/portfolio">
+          <NavLink to="/admin/portfolio" exact>
             <div className="navTitle">
               <img src={portfolioIcon} alt="portfolio" />
               <p>Portfolio</p>
             </div>
             <div className="navLine"></div>
           </NavLink>
-          <NavLink to="/admin/carrers">
+          <NavLink to="/admin/carrers" exact>
             <div className="navTitle">
               <img src={carrersIcon} alt="carrers" />
               <p>Carrers</p>
             </div>
             <div className="navLine"></div>
           </NavLink>
-          <NavLink to="/admin/contact">
+          <NavLink to="/admin/contact" exact>
             <div className="navTitle">
               <img src={contactIcon} alt="contact" />
               <p>Contact</p>

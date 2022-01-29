@@ -179,6 +179,14 @@
   background-color: #020203;
 }
 
+.Title {
+  padding: 3rem 0;
+}
+
+.Title p {
+  color: #565656;
+}
+
 .dFlex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -239,6 +247,43 @@
   margin: 0 0.5rem;
 }
 
+.dFlex .mainContent header .userId .logout-tooltip {
+  visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, 100%);
+          transform: translate(-50%, 100%);
+}
+
+.dFlex .mainContent header .userId .logout-tooltip img {
+  margin-bottom: -0.4rem;
+}
+
+.dFlex .mainContent header .userId .logout-tooltip .logout-wrapper {
+  background: #111325;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.dFlex .mainContent header .userId .logout-tooltip .logout-wrapper p {
+  margin: 0;
+  color: #fff;
+}
+
+.dFlex .mainContent header .userId .logout-tooltip .logout-wrapper:hover {
+  background: #161930;
+}
+
 .dFlex .mainContent .dashboardContainer {
   background-color: #f8f8f8;
   padding: 0 2rem;
@@ -257,32 +302,6 @@
 }
 
 .dFlex .mainContent .dashboardContainer .visits-wrapper .total-visits p:last-child {
-  margin-top: 0.4rem;
-  font-weight: bold;
-  font-size: 2rem;
-}
-
-.dFlex .mainContent .dashboardContainer .visits-wrapper .todays-visits {
-  margin-left: 2.5rem;
-}
-
-.dFlex .mainContent .dashboardContainer .visits-wrapper .todays-visits .todays-visits-tit {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.dFlex .mainContent .dashboardContainer .visits-wrapper .todays-visits .todays-visits-tit p {
-  color: #fff;
-  font-size: 1rem;
-}
-
-.dFlex .mainContent .dashboardContainer .visits-wrapper .todays-visits .todays-visits-tit img {
-  margin-left: 0.5rem;
-}
-
-.dFlex .mainContent .dashboardContainer .visits-wrapper .todays-visits p.highlighted {
-  color: #f6a01f;
   margin-top: 0.4rem;
   font-weight: bold;
   font-size: 2rem;
@@ -345,37 +364,147 @@
   padding: 1rem 0;
 }
 
-.dFlex .mainContent .portfolioContainer .portfolioCardContainer .portfolioCard p {
+.dFlex .mainContent .portfolioContainer .portfolioCardContainer .portfolioCard .todays-visits {
+  margin-left: 2.5rem;
+}
+
+.dFlex .mainContent .portfolioContainer .portfolioCardContainer .portfolioCard .todays-visits .todays-visits-tit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dFlex .mainContent .portfolioContainer .portfolioCardContainer .portfolioCard .todays-visits .todays-visits-tit p {
+  color: #fff;
+  font-size: 1rem;
+}
+
+.dFlex .mainContent .portfolioContainer .portfolioCardContainer .portfolioCard .todays-visits .todays-visits-tit img {
+  margin-left: 0.5rem;
+}
+
+.dFlex .mainContent .portfolioContainer .portfolioCardContainer .portfolioCard .todays-visits p.highlighted {
+  color: #f6a01f;
+  margin-top: 0.4rem;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.dFlex .mainContent .portfolioContainer .portfolioContainer {
+  padding: 0 2rem;
+  background-color: #f8f8f8;
+}
+
+.dFlex .mainContent .portfolioContainer .portfolioContainer .portfolioForm {
+  background-color: #090a13;
+  padding: 2rem 1.5rem;
+}
+
+.dFlex .mainContent .portfolioContainer .portfolioContainer .portfolioForm h3 {
+  color: #f6a01f;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.dFlex .mainContent .portfolioContainer .portfolioContainer .portfolioForm form .formInput {
+  margin-bottom: 1.5rem;
+}
+
+.dFlex .mainContent .portfolioContainer .portfolioContainer .portfolioForm form .formInput p {
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.dFlex .mainContent .portfolioContainer .portfolioContainer .portfolioForm form .formInput input {
+  max-width: 400px;
+  width: 100%;
+  padding: 0.3rem 0.5rem;
+  border-radius: 5px;
+}
+
+.dFlex .mainContent .portfolioContainer .portfolioContainer .portfolioForm form .formInput select {
+  padding: 0.3rem 0.8rem;
+  border-radius: 5px;
+}
+
+.dFlex .mainContent .portfolioContainer .portfolioContainer .portfolioForm form .formInput .fileDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dFlex .mainContent .portfolioContainer .portfolioContainer .portfolioForm form .formInput .fileDiv .custom-file-upload {
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.4rem 1rem;
+  background-color: #fff;
+}
+
+.dFlex .mainContent .portfolioContainer .portfolioContainer .portfolioForm form .formInput .fileDiv .custom-file-upload input[type="file"] {
+  display: none;
+}
+
+.dFlex .mainContent .portfolioContainer .portfolioContainer .portfolioForm form .formInput .fileDiv h4 {
+  color: #fff;
+  margin-left: 0.5rem;
+  font-size: 1rem;
+}
+
+.dFlex .mainContent .portfolioContainer .portfolioContainer .portfolioCardContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+  padding: 1rem 0;
+}
+
+.dFlex .mainContent .portfolioContainer .portfolioContainer .portfolioCardContainer .portfolioCard p {
   line-height: 1.5rem;
 }
 
-.dFlex .mainContent .portfolioContainer .portfolioCardContainer .portfolioCard .btn-wrapper {
+.dFlex .mainContent .portfolioContainer .portfolioContainer .portfolioCardContainer .portfolioCard .btn-wrapper {
   margin-top: 0.5rem;
 }
 
-.dFlex .mainContent .portfolioContainer .portfolioCardContainer .portfolioCard .btn-wrapper button {
+.dFlex .mainContent .portfolioContainer .portfolioContainer .portfolioCardContainer .portfolioCard .btn-wrapper button {
   padding: 0.4rem 1.5rem;
   border: none;
   border-radius: 37px;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
-.dFlex .mainContent .portfolioContainer .portfolioCardContainer .portfolioCard .btn-wrapper button:nth-child(1) {
+.dFlex .mainContent .portfolioContainer .portfolioContainer .portfolioCardContainer .portfolioCard .btn-wrapper button:nth-child(1) {
   background-color: #ff0000;
   color: #fff;
 }
 
-.dFlex .mainContent .portfolioContainer .portfolioCardContainer .portfolioCard .btn-wrapper button:last-child {
+.dFlex .mainContent .portfolioContainer .portfolioContainer .portfolioCardContainer .portfolioCard .btn-wrapper button:nth-child(1):hover {
+  -webkit-box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.8);
+          box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.8);
+}
+
+.dFlex .mainContent .portfolioContainer .portfolioContainer .portfolioCardContainer .portfolioCard .btn-wrapper button:last-child {
   border: 1px solid #00af07;
   color: #00af07;
+  background-color: transparent;
   margin-left: 1rem;
 }
 
-.dFlex .mainContent .portfolioContainer .portfolioCardContainer .portfolioCard img {
-  width: 100%;
+.dFlex .mainContent .portfolioContainer .portfolioContainer .portfolioCardContainer .portfolioCard .btn-wrapper button:last-child:hover {
+  background-color: #00af07;
+  color: #fff;
 }
 
-.dFlex .mainContent .Title {
-  padding: 3rem 0;
+.dFlex .mainContent .portfolioContainer .portfolioContainer .portfolioCardContainer .portfolioCard img {
+  width: 100%;
 }
 
 .contactContainer {
@@ -467,13 +596,10 @@
   margin-bottom: 0.5rem;
 }
 
-.carrersContainer .carrersForm form .formInput input {
+.carrersContainer .carrersForm form .formInput input,
+.carrersContainer .carrersForm form .formInput textarea {
   max-width: 400px;
   width: 100%;
-  padding: 0.4rem 0.5rem;
-}
-
-.carrersContainer .carrersForm form .formInput textarea {
   padding: 0.4rem 0.5rem;
 }
 
