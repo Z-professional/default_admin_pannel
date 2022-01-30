@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import userIcon from "../img/user.svg";
+import userIconWhite from "../img/user-white.svg";
 import downArrow from "../img/downarrow.svg";
 import triangle from "../img/triangle.svg";
+import burgerOpenIcon from "../img/menu-open.svg";
+import burgerCloseIcon from "../img/menu-close.svg";
+
+import { AdminSideBarContext } from "../contexts/AdminSideBar.context";
 
 const AdminHeader = () => {
+  const { isSideBarOpen, changeSideBarState } = useContext(AdminSideBarContext);
+
   const tooltip = () => {
-    var x = document.querySelector(".logout-tooltip");
+    const x = document.querySelector(".logout-tooltip");
     if (x.style.visibility === "visible") {
       x.style.visibility = "hidden";
     } else {
@@ -20,10 +27,17 @@ const AdminHeader = () => {
           <div className="line"></div>
           <div className="line"></div>
         </div>
+        <img
+          className="burger"
+          onClick={() => changeSideBarState()}
+          src={isSideBarOpen ? burgerCloseIcon : burgerOpenIcon}
+          alt="menu"
+        />
         <div className="userId" onClick={() => tooltip()}>
-          <img src={userIcon} alt="user" />
-          <p>admin@website.com</p>
-          <img src={downArrow} alt="arrow" />
+          <img className="user-black" src={userIcon} alt="user" />
+          <img className="user-white" src={userIconWhite} alt="user" />
+          <p className="user">admin@website.com</p>
+          <img className="down-arrow" src={downArrow} alt="arrow" />
           <div className="logout-tooltip">
             <img src={triangle} alt="triangle" />
             <div className="logout-wrapper">

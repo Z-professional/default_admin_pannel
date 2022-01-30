@@ -6,6 +6,7 @@ import Dashboard from "../Components/Dashboard.Component";
 import Portfolio from "../Components/Portfolio.Component";
 import Carrers from "../Components/Carrers.Component";
 import Contact from "../Components/Contact.Component";
+
 const AdminPanel = () => {
   return (
     <>
@@ -14,10 +15,10 @@ const AdminPanel = () => {
         <div className="mainContent">
           <AdminHeader />
           <Routes>
-            <Route path="/" exact element={<Dashboard />} />
-            <Route path="/portfolio" exact element={<Portfolio />} />
-            <Route path="/carrers" exact element={<Carrers />} />
-            <Route path="/contact" exact element={<Contact />} />
+            <Route path="/" exact="true" element={<Dashboard />} />
+            <Route path="/portfolio" exact="true" element={<Portfolio />} />
+            <Route path="/carrers" exact="true" element={<Carrers />} />
+            <Route path="/contact" exact="true" element={<Contact />} />
           </Routes>
         </div>
       </div>

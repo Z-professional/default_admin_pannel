@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import AdminTitle from "./AdminTitle.Component";
 import BarChart from "./BarChart.Component";
 import increaseIcon from "../img/increaseArrow.svg";
@@ -7,10 +7,13 @@ import decreaseIcon from "../img/decreaseArrow.svg";
 import { data } from "../Data/BarChart.Data";
 
 const Dashboard = () => {
+  useEffect(() => {
+    document.title = "Dashboard | Admin Panel - Zpro";
+  }, []);
   return (
     <>
       <div className="dashboardContainer">
-        <AdminTitle title="Dashboard" desc="Data Visualization, Statistics" />
+        <AdminTitle title="Dashboard" desc="Dashboard / Analytics" />
         <div className="visits-wrapper">
           <div className="total-visits">
             <p>Total Visits</p>

@@ -8,6 +8,8 @@
 // variables
 $backgroundColor: #090a13;
 $main-color: #f6a01f;
+
+// adminlogin
 .adminPanelContainer {
   width: 100%;
   height: 100vh;
@@ -73,6 +75,7 @@ $main-color: #f6a01f;
   }
 }
 
+// sidebar
 .sideBar {
   position: sticky;
   top: 0;
@@ -130,7 +133,7 @@ $main-color: #f6a01f;
 }
 // title
 .Title {
-  padding: 3rem 0;
+  padding: 2rem 0;
   p {
     color: #565656;
   }
@@ -138,242 +141,196 @@ $main-color: #f6a01f;
 
 .dFlex {
   display: flex;
-  .mainContent {
-    width: 100%;
-    header {
-      padding: 1.5rem 2rem;
-      height: fit-content;
+}
+.mainContent {
+  width: 100%;
+}
+// header
+header {
+  z-index: 100;
+  padding: 1.5rem 2rem;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .lineContainer {
+    .line {
+      height: 6px;
+      background: rgba(9, 10, 19, 0.1);
+      border-radius: 49px;
+      margin: 0.5rem 0;
+      &:first-child {
+        width: 80px;
+      }
+      &:nth-child(2) {
+        width: 60px;
+      }
+      &:last-child {
+        width: 40px;
+      }
+    }
+  }
+  img.burger {
+    z-index: 100;
+    display: none;
+  }
+  .userId {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    img.user-white {
+      display: none;
+    }
+    img {
+      user-select: none;
+    }
+    p {
+      margin: 0 0.5rem;
+      user-select: none;
+    }
+    .logout-tooltip {
+      visibility: hidden;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      .lineContainer {
-        .line {
-          height: 6px;
-          background: rgba(9, 10, 19, 0.1);
-          border-radius: 49px;
-          margin: 0.5rem 0;
-          &:first-child {
-            width: 80px;
-          }
-          &:nth-child(2) {
-            width: 60px;
-          }
-          &:last-child {
-            width: 40px;
-          }
+      flex-direction: column;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 100%);
+      img {
+        margin-bottom: -0.4rem;
+      }
+      .logout-wrapper {
+        background: #111325;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        p {
+          margin: 0;
+          color: #fff;
+        }
+        &:hover {
+          background: #161930;
         }
       }
-      .userId {
-        position: relative;
+    }
+  }
+}
+.dashboardContainer {
+  background-color: #f8f8f8;
+  padding: 0 2rem;
+  .visits-wrapper {
+    background-color: $backgroundColor;
+    padding: 2rem 1.5rem;
+    display: flex;
+    .todays-visits {
+      margin-left: 2.5rem;
+      .todays-visits-tit {
         display: flex;
-        align-items: center;
-        cursor: pointer;
         p {
-          margin: 0 0.5rem;
+          color: #fff;
+          font-size: 1rem;
         }
-        .logout-tooltip {
-          visibility: hidden;
+        img {
+          margin-left: 0.5rem;
+        }
+      }
+      p.highlighted {
+        color: $main-color;
+        margin-top: 0.4rem;
+        font-weight: bold;
+        font-size: 2rem;
+      }
+    }
+    p {
+      color: #fff;
+      &:last-child {
+        margin-top: 0.4rem;
+        font-weight: bold;
+        font-size: 2rem;
+      }
+    }
+  }
+}
+.portfolioContainer {
+  padding: 0 2rem;
+  background-color: #f8f8f8;
+  .portfolioForm {
+    background-color: $backgroundColor;
+    padding: 2rem 1.5rem;
+    h3 {
+      color: $main-color;
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    form {
+      .formInput {
+        margin-bottom: 1.5rem;
+        p {
+          color: #fff;
+          margin-bottom: 0.5rem;
+        }
+        input {
+          max-width: 400px;
+          width: 100%;
+          padding: 0.3rem 0.5rem;
+          border-radius: 5px;
+        }
+        select {
+          padding: 0.3rem 0.8rem;
+          border-radius: 5px;
+        }
+        .fileDiv {
           display: flex;
           align-items: center;
-          flex-direction: column;
-          position: absolute;
-          left: 50%;
-          transform: translate(-50%, 100%);
-          img {
-            margin-bottom: -0.4rem;
-          }
-          .logout-wrapper {
-            background: #111325;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            p {
-              margin: 0;
-              color: #fff;
-            }
-            &:hover {
-              background: #161930;
-            }
-          }
-        }
-      }
-    }
-    .dashboardContainer {
-      background-color: #f8f8f8;
-      padding: 0 2rem;
-      .visits-wrapper {
-        background-color: #090a13;
-        padding: 2rem 1.5rem;
-        display: flex;
-        .total-visits {
-          p {
-            color: #fff;
-            &:last-child {
-              margin-top: 0.4rem;
-              font-weight: bold;
-              font-size: 2rem;
-            }
-          }
-        }
-      }
-    }
-    .portfolioContainer {
-      padding: 0 2rem;
-      background-color: #f8f8f8;
-      .portfolioForm {
-        background-color: $backgroundColor;
-        padding: 2rem 1.5rem;
-        h3 {
-          color: #f6a01f;
-          font-size: 1.5rem;
-          margin-bottom: 2rem;
-        }
-        form {
-          .formInput {
-            margin-bottom: 1.5rem;
-            p {
-              color: #fff;
-              margin-bottom: 0.5rem;
-            }
-            input {
-              max-width: 400px;
-              width: 100%;
-              padding: 0.4rem 0.5rem;
-
-              input[type="file"] {
-                padding: 0.2rem 1rem;
-              }
-            }
-            select {
-              padding: 0.2rem 1rem;
-            }
-          }
-          input[type="button"] {
-            padding: 0.4rem 2rem;
-            background-color: hsla(36, 92%, 54%, 1);
-            border: none;
-            border-radius: 2rem;
-            font-weight: bold;
+          .custom-file-upload {
             cursor: pointer;
+            width: fit-content;
+            padding: 0.4rem 1rem;
+            background-color: #fff;
+            input[type="file"] {
+              display: none;
+            }
+          }
+          h4 {
+            color: #fff;
+            margin-left: 0.5rem;
+            font-size: 1rem;
           }
         }
       }
-      .portfolioCardContainer {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 2rem;
-        padding: 1rem 0;
-        .portfolioCard {
-          .todays-visits {
-            margin-left: 2.5rem;
-            .todays-visits-tit {
-              display: flex;
-              p {
-                color: #fff;
-                font-size: 1rem;
-              }
-              img {
-                margin-left: 0.5rem;
-              }
-            }
-            p.highlighted {
-              color: $main-color;
-              margin-top: 0.4rem;
-              font-weight: bold;
-              font-size: 2rem;
-            }
-          }
-        }
+      input[type="button"] {
+        padding: 0.4rem 2rem;
+        background-color: hsla(36, 92%, 54%, 1);
+        border: none;
+        border-radius: 2rem;
+        font-weight: bold;
+        cursor: pointer;
       }
-      .portfolioContainer {
-        padding: 0 2rem;
-        background-color: #f8f8f8;
-        .portfolioForm {
-          background-color: $backgroundColor;
-          padding: 2rem 1.5rem;
-          h3 {
-            color: #f6a01f;
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-          }
-          form {
-            .formInput {
-              margin-bottom: 1.5rem;
-              p {
-                color: #fff;
-                margin-bottom: 0.5rem;
-              }
-              input {
-                max-width: 400px;
-                width: 100%;
-                padding: 0.3rem 0.5rem;
-                border-radius: 5px;
-              }
-              select {
-                padding: 0.3rem 0.8rem;
-                border-radius: 5px;
-              }
-              .fileDiv {
-                display: flex;
-                align-items: center;
-                .custom-file-upload {
-                  cursor: pointer;
-                  width: fit-content;
-                  padding: 0.4rem 1rem;
-                  background-color: #fff;
-                  input[type="file"] {
-                    display: none;
-                  }
-                }
-                h4 {
-                  color: #fff;
-                  margin-left: 0.5rem;
-                  font-size: 1rem;
-                }
-              }
-            }
-          }
-        }
-        .portfolioCardContainer {
-          display: grid;
-          grid-template-columns: 1fr 1fr 1fr;
-          grid-gap: 2rem;
-          padding: 1rem 0;
-          .portfolioCard {
-            p {
-              line-height: 1.5rem;
-            }
-            .btn-wrapper {
-              margin-top: 0.5rem;
-              button {
-                padding: 0.4rem 1.5rem;
-                border: none;
-                border-radius: 37px;
-                cursor: pointer;
-                transition: 0.3s ease;
-                &:nth-child(1) {
-                  background-color: #ff0000;
-                  color: #fff;
-
-                  &:hover {
-                    box-shadow: 0px 0px 15px rgba(#ff0000, 0.8);
-                  }
-                }
-                &:last-child {
-                  border: 1px solid #00af07;
-                  color: #00af07;
-                  background-color: transparent;
-                  margin-left: 1rem;
-                  &:hover {
-                    background-color: #00af07;
-                    color: #fff;
-                  }
-                }
-              }
-            }
-            img {
-              width: 100%;
-            }
-          }
+    }
+  }
+  .portfolioCardContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    padding: 1rem 0;
+    .portfolioCard {
+      img {
+        width: 100%;
+      }
+      p {
+        line-height: 1.5rem;
+      }
+      input[type="button"] {
+        margin-top: 0.5rem;
+        padding: 0.4rem 1.5rem;
+        border: none;
+        border-radius: 37px;
+        cursor: pointer;
+        transition: 0.3s ease;
+        background-color: #ff0000;
+        color: #fff;
+        &:hover {
+          box-shadow: 0px 0px 15px rgba(#ff0000, 0.8);
         }
       }
     }
@@ -382,52 +339,50 @@ $main-color: #f6a01f;
 
 //contactAdmin
 .contactContainer {
-  margin: 0 2rem;
+  padding: 0 2rem;
+}
+.contacts-wrapper {
+  padding: 0 0 2rem 0;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 1.5rem;
 
-  .contacts-wrapper {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    column-gap: 1.5rem;
-    row-gap: 1.5rem;
-
-    .contacts {
-      background-color: #fff;
-      padding: 2rem;
-      box-shadow: 0px 0px 10px rgba(rgb(0, 0, 0), 0.1);
-      line-height: 1.5rem;
-
-      h2 {
-        color: hsla(220, 100%, 57%, 1);
-        margin-bottom: 0.8rem;
-      }
-      .contact-info {
-        display: flex;
-        p {
-          &:first-child {
-            font-weight: bold;
-            margin-right: 0.3rem;
-          }
+  .contacts {
+    background-color: #fff;
+    padding: 2rem;
+    box-shadow: 0px 0px 10px rgba(rgb(0, 0, 0), 0.1);
+    line-height: 1.5rem;
+    h2 {
+      color: hsla(220, 100%, 57%, 1);
+      margin-bottom: 0.8rem;
+    }
+    .contact-info {
+      display: flex;
+      p {
+        &:first-child {
+          font-weight: bold;
+          margin-right: 0.3rem;
         }
       }
-      .contact-infomsg {
-        p {
-          &:first-child {
-            font-weight: bold;
-          }
+    }
+    .contact-infomsg {
+      p {
+        &:first-child {
+          font-weight: bold;
         }
       }
-      input {
-        padding: 0.4rem 1.5rem;
-        border: none;
-        border-radius: 37px;
-        background-color: #ff0000;
-        color: #fff;
-        margin-top: 1rem;
-        cursor: pointer;
-        transition: 0.3s ease;
-        &:hover {
-          box-shadow: 0px 0px 15px rgba(#ff0000, 0.8);
-        }
+    }
+    input {
+      padding: 0.4rem 1.5rem;
+      border: none;
+      border-radius: 37px;
+      background-color: #ff0000;
+      color: #fff;
+      margin-top: 1rem;
+      cursor: pointer;
+      transition: 0.3s ease;
+      &:hover {
+        box-shadow: 0px 0px 15px rgba(#ff0000, 0.8);
       }
     }
   }
@@ -446,7 +401,7 @@ $main-color: #f6a01f;
     background-color: $backgroundColor;
     padding: 2rem 1.5rem;
     h3 {
-      color: #f6a01f;
+      color: $main-color;
       font-size: 1.5rem;
       margin-bottom: 2rem;
     }
@@ -463,9 +418,6 @@ $main-color: #f6a01f;
           width: 100%;
           padding: 0.4rem 0.5rem;
         }
-        // textarea {
-        //   padding: 0.4rem 0.5rem;
-        // }
         select {
           padding: 0.2rem 1rem;
         }

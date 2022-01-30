@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import AdminTitle from "./AdminTitle.Component";
 import { contacts } from "../Data/Contact.data";
 const Contact = () => {
+  useEffect(() => {
+    document.title = "Contact | Admin Panel - Zpro";
+  }, []);
   return (
     <>
       <div className="contactContainer">

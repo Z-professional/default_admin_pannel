@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import AdminTitle from "./AdminTitle.Component";
 import p1 from "../img/p1.png";
 import p2 from "../img/p2.png";
@@ -7,6 +7,9 @@ import p4 from "../img/p4.png";
 import p5 from "../img/p5.png";
 import p6 from "../img/p6.png";
 const Portfolio = () => {
+  useEffect(() => {
+    document.title = "Portfolio | Admin Panel - Zpro";
+  }, []);
   const [portfolioImg, setPortfolioImg] = useState(null);
 
   return (
@@ -69,55 +72,37 @@ const Portfolio = () => {
             <img src={p1} alt="p1" />
             <p>Name: Site Name</p>
             <p>Link: www.something.com</p>
-            <div className="btn-wrapper">
-              <button>Remove</button>
-              <button>Update</button>
-            </div>
+            <input type="button" value="Remove" />
           </div>
           <div className="portfolioCard">
             <img src={p2} alt="p1" />
             <p>Name: Site Name</p>
             <p>Link: www.something.com</p>
-            <div className="btn-wrapper">
-              <button>Remove</button>
-              <button>Update</button>
-            </div>
+            <input type="button" value="Remove" />
           </div>
           <div className="portfolioCard">
             <img src={p3} alt="p1" />
             <p>Name: Site Name</p>
             <p>Link: www.something.com</p>
-            <div className="btn-wrapper">
-              <button>Remove</button>
-              <button>Update</button>
-            </div>
+            <input type="button" value="Remove" />
           </div>
           <div className="portfolioCard">
             <img src={p4} alt="p1" />
             <p>Name: Site Name</p>
             <p>Link: www.something.com</p>
-            <div className="btn-wrapper">
-              <button>Remove</button>
-              <button>Update</button>
-            </div>
+            <input type="button" value="Remove" />
           </div>
           <div className="portfolioCard">
             <img src={p5} alt="p1" />
             <p>Name: Site Name</p>
             <p>Link: www.something.com</p>
-            <div className="btn-wrapper">
-              <button>Remove</button>
-              <button>Update</button>
-            </div>
+            <input type="button" value="Remove" />
           </div>
           <div className="portfolioCard">
             <img src={p6} alt="p1" />
             <p>Name: Site Name</p>
             <p>Link: www.something.com</p>
-            <div className="btn-wrapper">
-              <button>Remove</button>
-              <button>Update</button>
-            </div>
+            <input type="button" value="Remove" />
           </div>
         </div>
       </div>
